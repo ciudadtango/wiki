@@ -1,1 +1,36 @@
-function filterSections(e){const t=document.getElementById(e).value.toLowerCase(),n=document.querySelectorAll("details");n.forEach(e=>{const n=e.querySelectorAll("tbody tr"),r=e.querySelector("thead");let o=0;n.forEach(e=>{const t=e.textContent.toLowerCase().includes(t);e.style.display=t?"":"none",t&&o++}),t.length>0?o>0?(e.style.display="",e.open=!0,r&&(r.style.display="")):e.style.display="none":(e.style.display="",e.open=!1,n.forEach(e=>e.style.display=""),r&&(r.style.display=""))})}
+
+/**
+ * Filters rows inside <details> sections based on the user's input.
+ * It matches content in <tbody> rows and shows/hides sections accordingly.
+ */
+function filterSections(inputId) {
+  const searchTerm = document.getElementById(inputId).value.toLowerCase();
+  const detailSections = document.querySelectorAll("details");
+
+  detailSections.forEach((section) => {
+    const rows = section.querySelectorAll("tbody tr");
+    const header = section.querySelector("thead");
+    let matchCount = 0;
+
+    rows.forEach((row) => {
+      const isVisible = row.textContent.toLowerCase().includes(searchTerm);
+      row.style.display = isVisible ? "" : "none";
+      if (isVisible) matchCount++;
+    });
+
+    if (searchTerm.length > 0) {
+      if (matchCount > 0) {
+        section.style.display = "";
+        section.open = true;
+        if (header) header.style.display = "";
+      } else {
+        section.style.display = "none";
+      }
+    } else {
+      section.style.display = "";
+      section.open = false;
+      rows.forEach((row) => (row.style.display = ""));
+      if (header) header.style.display = "";
+    }
+  });
+}
