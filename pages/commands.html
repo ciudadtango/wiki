@@ -147,6 +147,95 @@
         </div>
       </details>
     </div>
+        <div class="chat-y-comunicacion">
+      <div class="search-container" style="text-align: center; margin: 1rem 0">
+        <input
+          id="busquedaGlobal"
+          onkeyup="filterSections('busquedaGlobal')"
+          placeholder="Buscar..."
+          style="
+            padding: 8px;
+            border: 1px solid #888;
+            border-radius: 6px;
+            width: 50%;
+            font-family: inherit;
+            background-color: #1e1e1e;
+            color: #fff;
+          "
+          type="text"
+        />
+      </div>
+      <details>
+        <summary>Chat y Comunicacion</summary>
+        <div class="table_1">
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>/helpop [mensaje]</td>
+                <td>
+                  Envía un mensaje privado a los administradores o moderadores
+                  para pedir ayuda.
+                </td>
+              </tr>
+              <tr>
+                <td>/msg [jugador] [mensaje]</td>
+                <td>Envía un mensaje privado a otro jugador.</td>
+              </tr>
+              <tr>
+                <td>/ignore [jugador]</td>
+                <td>Ignora los mensajes privados de un jugador específico.</td>
+              </tr>
+              <tr>
+                <td>/r [mensaje]</td>
+                <td>Responde al último mensaje privado recibido.</td>
+              </tr>
+              <tr>
+                <td>/msgtoggle</td>
+                <td>Activa o desactiva la recepción de mensajes privados.</td>
+              </tr>
+              <tr>
+                <td>/afk</td>
+                <td>Cambia tu estado a "Ausente".</td>
+              </tr>
+              <tr>
+                <td>/realname [jugador]</td>
+                <td>Muestra el nick real de un jugador.</td>
+              </tr>
+              <tr>
+                <td>/discord</td>
+                <td>Manda una invitacion al Discord</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table_2">
+          <h4 class="command-subtable-title">
+            Contamos con etiquetas personalizadas para el chat, usalas en tus
+            mensajes por ejemplo: "Estoy aqui [pos]"
+          </h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Etiqueta</th>
+                <th>Descripcion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>/ip</td>
+                <td>Entras al modo de juego de Parkour Infinito</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </div>
     <div class="utilidades">
       <details>
         <summary>Utilidades</summary>
@@ -218,6 +307,10 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td>/tpr</td>
+              <td>Te teletransporta a una ubicacion aleatoria en un radio de 1000 bloques del spawn (cooldown de 2 horas).</td>
+            </tr>            
             <tr>
               <td>/sethome [nombre]</td>
               <td>Establece un hogar en tu ubicación actual.</td>
